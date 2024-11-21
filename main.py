@@ -16,6 +16,10 @@ logger = logging.getLogger(__name__)
 # Crear una instancia de la aplicación FastAPI
 app = FastAPI()
 
+if __name__ == '__main__': 
+    import uvicorn 
+    uvicorn.run(app, host="0.0.0.0", port=8000)
+
 # Evento de inicio de la aplicación para inicializar la base de datos e insertar datos iniciales
 @app.on_event("startup")
 def on_startup():
