@@ -1,0 +1,4 @@
+import gunicorn
+
+
+web: gunicorn main:app -k uvicorn.workers.UvicornWorker
